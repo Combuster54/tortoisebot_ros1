@@ -44,5 +44,5 @@ ADD ros_entrypoint.sh /
 # Source the workspace every time a new shell is opened in the container
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /etc/bash.bashrc
 
-ENTRYPOINT ["bash", "/ros_entrypoint.sh", "roslaunch tortoisebot_firmware bringup.launch"]
+ENTRYPOINT ["roslaunch", "tortoisebot_firmware bringup.launch"]
 #CMD ["roslaunch", "tortoisebot_firmware bringup.launch"]
